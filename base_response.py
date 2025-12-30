@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional,Any,List
+from datetime import datetime, timezone
 
 
 class BaseResponse(BaseModel):
@@ -20,3 +21,5 @@ class Player(BaseModel):
     player_name:Optional[str]
     team:Optional[Team]
 
+class CreatePlayer(Player):
+    player_id: int
