@@ -10,10 +10,13 @@ class BaseResponse(BaseModel):
 
 
 class Team(BaseModel):
-    id_team:Optional[int]
+    team_id:Optional[int]
     team_name:Optional[str]
 
 
 
-
+class Player(BaseModel):
+    player_id:Optional[int]
+    player_name:Optional[str]
+    team:Optional[Team]
 
